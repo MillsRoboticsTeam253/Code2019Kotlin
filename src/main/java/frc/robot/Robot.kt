@@ -2,38 +2,41 @@ package frc.robot
 
 import edu.wpi.first.wpilibj.RobotBase
 import edu.wpi.first.wpilibj.TimedRobot
+import edu.wpi.first.wpilibj.command.Scheduler
 
 object Robot : TimedRobot(){
+    val drivetrain = Drivetrain()
+
     override fun robotInit() {
-        super.robotInit()
+        
     }
 
     override fun robotPeriodic() {
-        super.robotPeriodic()
+
     }
 
     override fun autonomousInit() {
-        super.autonomousInit()
+        
     }
 
     override fun autonomousPeriodic() {
-        super.autonomousPeriodic()
+        Scheduler.getInstance().run()
     }
 
     override fun teleopInit() {
-        super.teleopInit()
+        
     }
 
     override fun teleopPeriodic() {
-        super.teleopPeriodic()
+        Scheduler.getInstance().run()
     }
 
     override fun disabledInit() {
-        super.disabledInit()
+        
     }
 
     override fun disabledPeriodic() {
-        super.disabledPeriodic()
+        
     }
 
 }
